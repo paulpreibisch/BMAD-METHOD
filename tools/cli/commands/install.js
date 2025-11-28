@@ -89,6 +89,7 @@ module.exports = {
               cwd: result.projectDir,
               stdio: 'inherit',
               shell: true,
+              env: { ...process.env, INIT_CWD: result.projectDir },
             });
             console.log(chalk.green('\n✓ AgentVibes installation complete'));
           } catch {
